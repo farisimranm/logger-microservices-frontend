@@ -37,51 +37,54 @@ const AuditCard = (props) => {
                 backgroundColor: '#FFFFFF',
                 minHeight: '100%',
                 paddingX: 1,
-                borderRadius: 3
+                borderRadius: 3,
             }}
         >
-            <CardContent>
-            <Box className='card-title'>
-                {
-                    card.referenceNumber ? (
-                        <Box
-                            sx={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                mb: 1,
-                            }}
-                        >
-                            <Typography variant='body1' fontWeight={700}>
-                                {card.title}
-                            </Typography>
-                            <ChevronRightIcon sx={{ opacity: 0.5 }}  /> 
-                            <Typography
-                                variant='body1'
+            <CardContent
+                sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                }}
+            >
+                <Box className='card-title'>
+                    {
+                        card.referenceNumber ? (
+                            <Box
                                 sx={{
-                                    color: '#26890D',
-                                    textDecoration: 'underline',
-                                    fontWeight: 700
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    mb: 1,
                                 }}
-                            >  
-                                {card.referenceNumber}
-                            </Typography>
-                        </Box>
-                    ) : (
-                        <Box mb={1}>
-                            <Typography variant='body1' fontWeight={700}>
-                                { card.title }
-                            </Typography>
-                        </Box>
-                    )
-                }
-            </Box>
+                            >
+                                <Typography variant='body1' fontWeight={700}>
+                                    {card.title}
+                                </Typography>
+                                <ChevronRightIcon sx={{ opacity: 0.5 }}  /> 
+                                <Typography
+                                    variant='body1'
+                                    sx={{
+                                        color: '#26890D',
+                                        textDecoration: 'underline',
+                                        fontWeight: 700
+                                    }}
+                                >  
+                                    {card.referenceNumber}
+                                </Typography>
+                            </Box>
+                        ) : (
+                            <Box mb={1}>
+                                <Typography variant='body1' fontWeight={700}>
+                                    { card.title }
+                                </Typography>
+                            </Box>
+                        )
+                    }
+                </Box>
                 <Box
                     className="card-body"
                     sx={{
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        alignItems: 'flex-start',
-                        minHeight: 100,
+                        position: 'relative',
+                        minHeight: '150px',
                     }}
                 >
                     <Box
@@ -89,7 +92,7 @@ const AuditCard = (props) => {
                             flex: '1 1 auto',
                             alignItems: 'stretch',
                             paddingRight: 1,
-                            wordBreak: 'break-word'
+                            wordBreak: 'break-word',
                         }}
                     >
                         { iterateObject(JSON.parse(card.desc)) }
@@ -99,19 +102,20 @@ const AuditCard = (props) => {
                         sx={{
                             width: 40,
                             height: 40,
-                            flex: '0 0 auto',
                             borderRadius: '50%',
                             backgroundColor: '#26890D',
-                            alignSelf: 'flex-end',
                             display: 'flex',
                             justifyContent: 'center',
-                            alignItems: 'center'
+                            alignItems: 'center',
+                            position: 'absolute',
+                            bottom: 0,
+                            right: 0,
                         }}
                     >
                         { card.icon }
                     </Box>
-                    
                 </Box>
+                
             </CardContent>
         </Card>
     );

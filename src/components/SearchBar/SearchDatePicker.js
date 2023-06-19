@@ -32,6 +32,7 @@ function SearchDatePicker(props) {
                             label: {
                                 color: '#000000',
                             },
+                            borderRadius: 3,
                             '& label.Mui-focused': {
                                 color: '#26890D',
                             },
@@ -39,7 +40,7 @@ function SearchDatePicker(props) {
                                 borderBottomColor: '#26890D',
                             },
                             '& .MuiOutlinedInput-root': {
-                                
+                                borderRadius: 3,
                                 '&:hover fieldset': {
                                 borderColor: '#000000',
                                 },

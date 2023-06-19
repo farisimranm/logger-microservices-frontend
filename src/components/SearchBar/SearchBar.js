@@ -108,32 +108,19 @@ function SearchBar() {
                                     }))
                                 }}
                                 variant="outlined"
+                                InputProps={{ sx: { borderRadius: 3 } }}
                                 sx={{
                                     backgroundColor: "#D9D9D9",
                                     label: {
                                         color: '#000000',
                                     },
-                                    '& label.Mui-focused': {
-                                        color: '#26890D',
-                                    },
-                                    '& .MuiInput-underline:after': {
-                                        borderBottomColor: '#26890D',
-                                    },
-                                    '& .MuiOutlinedInput-root': {
-                                        
-                                        '&:hover fieldset': {
-                                        borderColor: '#000000',
-                                        },
-                                        '&.Mui-focused fieldset': {
-                                        borderColor: '#26890D',
-                                        },
-                                    },
+                                    borderRadius: 3,
                                 }}
                             />
                         </FormControl>
                     </Box>
                     
-                    <Box width='18%'>
+                    <Box width='15%'>
                         <FormControl>
                             <SearchAccordion
                                 label='Module'
@@ -142,7 +129,7 @@ function SearchBar() {
                         </FormControl>
                     </Box>
                     
-                    <Box width='18%'>
+                    <Box width='15%'>
                         <FormControl>
                             <SearchAccordion
                                 label='Action'
@@ -151,7 +138,7 @@ function SearchBar() {
                         </FormControl>
                     </Box>
                     
-                    <Box width='18%'>
+                    <Box width='15%'>
                         <FormControl>
                             <SearchAccordion
                                 label='Level'
@@ -178,24 +165,31 @@ function SearchBar() {
                         </FormControl>
                     </Box>
                     
+                    <Box>
+                        <FormControl>
+                        <Button
+                            type='submit'
+                            variant="contained"
+                            sx={{
+                                backgroundColor: '#000000',
+                                color: '#FFFFFF',
+                                textTransform: 'none',
+                                borderRadius: 3,
+                                paddingY: 2,
+                                '&:hover': {
+                                    backgroundColor: 'primary.main',
+                                    color: '#FFFFFF',
+                                },
+                            }}
+                        >
+                            Search
+                        </Button>
+                    </FormControl>
+                    </Box>
+
                 </Box>
                 
-                <FormControl>
-                    <Button
-                        type='submit'
-                        variant="contained"
-                        sx={{
-                            backgroundColor: 'black',
-                            color: 'white',
-                            textTransform: 'none',
-                            '&:hover': {
-                                opacity: 0.4,
-                            },
-                        }}
-                    >
-                        Search
-                    </Button>
-                </FormControl>
+                
             </Box>
         </Paper>
         );

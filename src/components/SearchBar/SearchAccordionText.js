@@ -45,16 +45,6 @@ function SearchAccordionText(props) {
 
     return (
         <Autocomplete
-            sx={{
-                "&.Mui-focused .MuiInputLabel-outlined": {
-                    color: '#26890D',
-                },
-                "& .MuiAutocomplete-inputRoot": {
-                    "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: '#26890D'
-                    }
-                }
-            }}
             label={label}
             keyname={keyname}
             multiple
@@ -76,9 +66,9 @@ function SearchAccordionText(props) {
                         checked={selected}
                         value={option}
                         sx={{
-                            color: '#26890D',
+                            color: 'primary.main',
                             [`&, &.${checkboxClasses.checked}`]: {
-                                color: '#26890D',
+                                color: 'primary.main',
                               }
                         }}
                     />

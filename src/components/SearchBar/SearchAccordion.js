@@ -6,7 +6,8 @@ import SearchAccordionText from './SearchAccordionText';
 function SearchAccordion(props) {
     const [expanded, setExpanded] = useState(false);
     const { label, keyname } = props;
-    const width = 165;
+    const width = 150;
+    const height = 50;
 
     const handleAccordionEnter = () => {
         setExpanded(true);
@@ -26,13 +27,16 @@ function SearchAccordion(props) {
                     position: 'absolute',
                     zIndex: 1,
                     width: width,
+                    borderRadius: 3,
                 }}
             >
                 <AccordionSummary 
                     expandIcon={<ExpandMoreIcon sx={{ color: expanded ? '#FFFFFF' : '#000000' }} />}
                     sx={{
-                        backgroundColor: expanded ? '#26890D' : '#D9D9D9',
+                        backgroundColor: expanded ? 'primary.main' : '#D9D9D9',
                         color: expanded ? '#FFFFFF' : '#000000',
+                        height: height,
+                        borderRadius: 3,
                     }}
                 >
                     <Typography>
@@ -48,9 +52,14 @@ function SearchAccordion(props) {
             </Accordion>
             <Accordion
                 className='fake-accordion'
-                sx={{ width: width, opacity: 0, boxShadow: 'none' }}
+                sx={{ width: width, opacity: 1, boxShadow: 'none' }}
             >
-                <AccordionSummary>
+                <AccordionSummary
+                    sx={{
+                        height: height,
+                        borderRadius: 3,
+                    }}
+                >
                 </AccordionSummary>
             </Accordion>
         </Box>

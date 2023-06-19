@@ -9,12 +9,28 @@ class AuditLogDashboard extends Component {
             <Box minHeight='100vh'>
                 <Container>
                     <Box className='page-header'>
-                        <Typography variant='h6' sx={{ fontWeight: 'bold' }}>
+                        <Typography
+                            variant='h6'
+                            sx={{
+                                fontWeight: 'bold',
+                                marginY: 2,
+                            }}
+                        >
                             Audit Log
                         </Typography>
                     </Box>
                     <Box className='log-table'>
-                        <Typography variant='h6'>All Audit Log</Typography>
+                        <Typography
+                            variant='h6'
+                            sx={{
+                                textDecoration: 'underline',
+                                textDecorationColor: '#26890D',
+                                textDecorationThickness: 3,
+                                textUnderlineOffset: 7,
+                            }}
+                        >
+                            All Audit Log
+                        </Typography>
                         <AuditLogTable />
                     </Box>
                 </Container>

@@ -1,10 +1,9 @@
 import './App.css';
 import { Provider } from 'react-redux';
 import store from './redux/store'
-import { ThemeProvider, createTheme } from '@mui/material';
+import { ThemeProvider } from '@mui/material';
 import AppRouter from './router/AppRouter';
-
-const theme = createTheme();
+import { theme } from './themes/theme';
 
 function App() {
   return (

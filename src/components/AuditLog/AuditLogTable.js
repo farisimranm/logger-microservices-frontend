@@ -88,7 +88,7 @@ function EnhancedTableHead(props) {
 
   return (
     <TableHead>
-      <TableRow sx={{backgroundColor: '#d9d9d9'}}>
+      <TableRow sx={{backgroundColor: '#D9D9D9'}}>
         {headCells.map((headCell) => (
           <TableCell
             key={headCell.id}
@@ -100,6 +100,7 @@ function EnhancedTableHead(props) {
               active={orderBy === headCell.id}
               direction={orderBy === headCell.id ? order : 'asc'}
               onClick={createSortHandler(headCell.id)}
+              sx={{ fontWeight: 600 }}
             >
               {headCell.label}
             </TableSortLabel>
@@ -252,9 +253,9 @@ function AuditLogTable() {
                           },
                           '&.Mui-selected': {
                               color: 'white',
-                              backgroundColor: '#26890D',
+                              backgroundColor: 'primary.main',
                               '&:hover': {
-                              backgroundColor: 'darkgreen',
+                              backgroundColor: 'primary.dark',
                               },
                           },
                         },
