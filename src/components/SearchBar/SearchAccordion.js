@@ -26,7 +26,7 @@ function SearchAccordion(props) {
                 sx={{
                     position: 'absolute',
                     zIndex: 1,
-                    width: width,
+                    width: expanded ? 330 : width,
                     borderRadius: 3,
                 }}
             >
@@ -35,6 +35,7 @@ function SearchAccordion(props) {
                     sx={{
                         backgroundColor: expanded ? 'primary.main' : '#D9D9D9',
                         color: expanded ? '#FFFFFF' : '#000000',
+                        width: width,
                         height: height,
                         borderRadius: 3,
                     }}

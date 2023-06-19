@@ -55,6 +55,17 @@ function SearchAccordionText(props) {
                     [keyname]: values
                 }));
             }}
+            componentsProps={{
+                paper: {
+                    sx: {
+                        width: '100%'
+                    }
+                }
+            }}
+            sx={{
+                width: 300,
+                backgroundColor: '#FFFFFF',
+            }}
             options={options}
             disableCloseOnSelect
             getOptionLabel={(option) => option}

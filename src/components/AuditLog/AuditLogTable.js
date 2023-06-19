@@ -172,7 +172,7 @@ function AuditLogTable() {
   };
 
   const getEntriesMessage = () => {
-    if(pageNumber === 0 && auditLogs.length === 0) {
+    if(pageNumber === 0 && Array.isArray(auditLogs) && auditLogs.length === 0) {
       return "No entries available";
     }
 
@@ -203,7 +203,7 @@ function AuditLogTable() {
                 />
                 <TableBody>
                 {
-                  auditLogs.length > 0 ? (
+                  Array.isArray(auditLogs) && auditLogs.length > 0 ? (
                     auditLogs.map((auditLog, index) => {
                       return (
                         <TableRow

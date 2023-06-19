@@ -10,7 +10,7 @@ export const fetchData = async ({ page = 0, searchCriteriaList = [] } = {}) => {
             },
             body: JSON.stringify({
                 "page": page,
-                "size": 10,
+                "size": 100,
                 "logKey": logKey,
                 "searchCriteriaList": searchCriteriaList
             }),
